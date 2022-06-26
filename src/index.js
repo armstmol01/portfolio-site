@@ -1,14 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom'; // react-dom/client is v18
+import ReactDOM from 'react-dom/client'; // react-dom/client is v18
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(  // v17 of react uses ReactDOM.render, v18 uses root.render
+// v17 of react uses ReactDOM.render, v18 uses root.render
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
